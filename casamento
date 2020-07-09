@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="css/estilizar.css" rel="stylesheet">
+	<style>
+
+figure {
+  float: center;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  border: thin black solid;
+  margin: 0.5em;
+  padding: 0.5em;
+  border: 5px;
+  position: relative;
+  top: 400px;
+}
+
+body {
+  background-image: url(fotos/26.jpg);
+}
+
+
+
+</style>
+	<title>Pagina Inicial</title>
+</head>
+<body>
+
+<div id="div2">
+
+<div id="div3">
+		<input type="radio" id="foto1" name="grupo" checked>
+		<label for="foto1"> <img src="fotos/08.jpg"> </label>
+
+		<input type="radio" id="foto2" name="grupo">
+		<label for="foto2"> <img src="fotos/07.jpg"> </label>
+
+		<input type="radio" id="foto3" name="grupo">
+		<label for="foto3"> <img src="fotos/04.jpg" height="64"> </label>
+
+		<input type="radio" id="foto4" name="grupo">
+		<label for="foto4"> <img src="fotos/25.jpg" height="64"> </label>
+
+		<input type="radio" id="foto5" name="grupo">
+		<label for="foto5"> <img src="fotos/19.jpg" height="64"> </label>
+
+		<input type="radio" id="foto6" name="grupo">
+		<label for="foto6"> <img src="fotos/20.jpg" height="64"> </label>
+</div>
+
+	<div class="principal">
+		<div class="slide">
+			<img src="fotos/08.jpg" width="865" height="350">
+			<img src="fotos/07.jpg" width="865" height="350">
+			<img src="fotos/04.jpg" width="865" height="350">
+			<img src="fotos/25.jpg" width="865" height="350">
+			<img src="fotos/19.jpg" width="865" height="350">
+			<img src="fotos/20.jpg" width="865" height="350">
+		</div>
+		
+	</div>
+</div>
+
+
+</div>
+
+	<form method="get" action="SobreNos.php"> <button class="btn btn-green">Sobre</button> </form>
+
+	<form method="get" action="galeria.php"> <button class="btn btn-galeria">Galeria</button> </form>
+
+	<form method="get" action="SobreNos.php"> <button class="btn btn-orçamento">Orçamento</button> </form>
+	<br>
+	<br>
+
+<font color="red">
+	<figure>
+		<p> <img class="scaled" src="fotos/01.jpg" width="400" height="300" alt="Casamento">
+		<figcaption> <div id="eu"> Primeiro casamento </div></figcaption>
+		 </p>
+	</figure>
+
+<br>
+<br>
+
+	<figure>
+		<p> <img class="scaled" src="fotos/02.jpg" width="400" height="300" alt="Casamento">
+		<figcaption> <div id="eu"> Primeiro casamento </div></figcaption>
+		 </p>
+	</figure>
+
+	<br>
+    <br>
+    <figure>
+		<p> <img class="scaled" src="fotos/04.jpg" width="400" height="300" alt="Casamento">
+		<figcaption> <div id="eu"> Primeiro casamento </div></figcaption>
+		 </p>
+	</figure>
+ </font>
+</html>
+
+
+
+
+CSS
+
+*{
+
+	margin: 0;
+	padding: 0;
+}
+
+
+.btn-green{
+	height: 30px;
+	width: 90px;
+	position: absolute;
+	left: 20px;
+	top: 380px;
+	font-family: garamond;
+	font-size: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+	cursor: pointer;
+	display:inline-block;
+	text-decoration:none;
+	background: #5E07C9;
+	color: white;
+	border-radius: 5px;
+
+}
+
+.btn-galeria{
+	height: 30px;
+	width: 85px;
+	position: absolute;
+	left: 135px;
+	top: 380px;
+	font-family: garamond;
+	font-size: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+	cursor: pointer;
+	display:inline-block;
+	text-decoration:none;
+	background: #5E07C9;
+	color: white;
+	border-radius: 5px;
+	
+
+}
+
+
+.btn-orçamento{
+	height: 30px;
+	width: 120px;
+	position: absolute;
+	left: 250px;
+	top: 380px;
+	font-family: garamond;
+	font-size: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+	cursor: pointer;
+	display:inline-block;
+	text-decoration:none;
+	background: #5E07C9;
+	color: white;
+	border-radius: 5px;
+}
+
+
+#div2{
+	width: 752px;
+	height: auto;
+	-webkit-border-radius: 10px;
+	background-color: #DABFFC;
+	position: absolute;
+	top: 0px;
+	left: 5.5%;
+}
+
+#div3{
+	width: 900px;
+}
+
+.principal{
+	width: 115%;
+	height: 311px;
+	border: solid 2px black;
+	overflow: hidden;
+}
+
+.slide{
+	display: flex;
+	width: 80%;
+	transition: all .8s;
+}
+label img{
+	width: 90px;
+	cursor: pointer;
+	float: left;
+	opacity: 0.3;
+	transition: all .4s;
+}
+
+#foto2:checked ~ .principal .slide{
+	margin-left: -100%; 
+
+}
+
+#foto3:checked ~ .principal .slide{
+	margin-left: -200%; 
+
+}
+
+#foto4:checked ~ .principal .slide{
+	margin-left: -300%; 
+
+}
+
+#foto5:checked ~ .principal .slide{
+	margin-left: -400%; 
+
+}
+
+#foto6:checked ~ .principal .slide{
+	margin-left: -500%; 
+
+}
+
+/*terminar o #foto*/
+
+input[name="grupo"]{
+	display: none;
+}
+
+input[name="grupo"]:checked + label img {
+	opacity: .9;
+}
+
+#div3{
+
+	position: relative;
+	text-align: right;
+
+}
+
+#eu{
+	font-size: 30px;
+	font-family: brush script mt, cursive;
+	color: #7306A6
+}
